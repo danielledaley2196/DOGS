@@ -11,11 +11,6 @@ body {
     height: 100%;
   }
   /* Optional: Makes the sample page fill the window. */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
   body {
     padding: 0 !important;
   }
@@ -96,4 +91,7 @@ body {
   }
   .iw_table_icon {
     text-align: right;
+  }
+  #dog {
+    
   }
