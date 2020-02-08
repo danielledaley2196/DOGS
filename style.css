@@ -23,24 +23,24 @@ body {
     display: -ms-flexbox;
     display: flex;
     left: 0;
-    position: absolute;
     top: 0;
     width: 440px;
     z-index: 1;
   }
   #map {
     margin-top: 40px;
-    width: 440px;
   }
   #listing {
-    position: absolute;
-    width: 200px;
+    width: 100vh;
     height: 470px;
     overflow: auto;
     left: 442px;
     top: 0px;
     cursor: pointer;
     overflow-x: hidden;
+    margin-right: 0px;
+    margin-top: 20px;
+    border: solid 2px;
   }
   #findhotels {
     font-size: 14px;
@@ -73,7 +73,7 @@ body {
   }
   #resultsTable {
     border-collapse: collapse;
-    width: 240px;
+    width: 100vh;
   }
   #rating {
     font-size: 13px;
@@ -90,5 +90,11 @@ body {
     text-align: right;
   }
   div.mapSize {
-    height: 50vh;
+    height: 100vh;
+    width: 100vh;
+    margin-right: 0px;
+  }
+  div.theDog {
+    width: 100vh;
+    height: auto;
   }

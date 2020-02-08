@@ -18,34 +18,33 @@
           <a href="#" data-target="theHamburger" class="sidenav-trigger">Popular Places</a>
         </div>
       </nav>
-    
+      
       <ul class="sidenav" id="theHamburger">
         <li data-place="boston">Boston</li>
         <li data-place="chicago">Chicago</li>
         <li data-place="seattle">Seattle</li>
       </ul>
-        <!--Put search bar here for mobile, when not mobile it is in the nav-->
-    <div class="theBigPicture">
+      <!--Put search bar here for mobile, when not mobile it is in the nav-->
+      <div class="theBigPicture">
         <div class="row">
-            <div class="col s2 hide-on-med-and-down" id="theSideBar">
-                <ul id="popularPlaces">
-                    <li data-place="boston">Boston</li>
-                    <li data-place="chicago">Chicago</li>
-                    <li data-place="seattle">Seattle</li>
-              </ul>
+          <div class="col s2 hide-on-med-and-down" id="theSideBar">
+            <ul id="popularPlaces">
+              <li data-place="boston">Boston</li>
+              <li data-place="chicago">Chicago</li>
+              <li data-place="seattle">Seattle</li>
+            </ul>
+          </div>
+          <div class="col s10" id="theMap">
+            <div class="theDog">
+              <img id="dog" class="responsive-img" src="">
             </div>
-              <div class="col s10">
-              <img id="dog" src="">
-            </div>
-            <div class="col s10" id="theMap">
-              <div class="hotel-search">
-                <div id="findhotels">
-                  Find hotels in:
-                </div>
-          
-                <div id="locationField">
-                  <input id="autocomplete" placeholder="Enter a city" type="text" />
-                </div>
+                  <div class="hotel-search">
+                    <div id="findhotels">
+                      Find Pet Friendly Places: 
+                    </div>
+                    <div id="locationField">
+                      <input id="autocomplete" placeholder="Enter a city" type="text" />
+                    </div>
           
                 <div id="controls">
                   <select id="country">
@@ -68,13 +67,12 @@
               </div>
           
               <div id="map" class="mapSize"></div>
-          
-              <div id="listing">
-                <table id="resultsTable">
-                  <tbody id="results"></tbody>
-                </table>
-              </div>
-          
+                <div id="listing">
+                  <table id="resultsTable">
+                    <tbody id="results"></tbody>
+                  </table>
+                </div>
+                
               <div style="display: none">
                 <div id="info-content">
                   <table>
