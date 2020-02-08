@@ -7,9 +7,6 @@ body {
   main {
     flex: 1 0 auto;
   }
-  #map {
-    height: 100%;
-  }
   /* Optional: Makes the sample page fill the window. */
   body {
     padding: 0 !important;
@@ -92,6 +89,6 @@ body {
   .iw_table_icon {
     text-align: right;
   }
-  #dog {
-    
+  div.mapSize {
+    height: 50vh;
   }
