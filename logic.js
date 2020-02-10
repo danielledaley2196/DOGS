@@ -30,6 +30,14 @@ $(function(){
                         .addClass("place")
                         .text(element));
       });
+      $places.append($("<li>")
+                    .attr("id", "reset")
+                    .css("font-weight", "bold")
+                    .text("CLEAR ALL"));
+      $hamburger.append($("<li>")
+                    .attr("id", "reset")
+                    .css("font-weight", "bold")
+                    .text("CLEAR ALL"));
     }
     else {
       $places.append($("<li>")
