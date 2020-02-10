@@ -104,6 +104,7 @@
     // zoom the map in on the city.
     function onPlaceChanged() {
       var place = autocomplete.getPlace();
+      window.getAutoLocation(place.formatted_address);
       if (place.geometry) {
         map.panTo(place.geometry.location);
         map.setZoom(15);
