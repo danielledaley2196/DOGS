@@ -98,3 +98,6 @@ body {
     width: 100vh;
     height: auto;
   }
+  .isHidden {
+    display:none;
+  }
