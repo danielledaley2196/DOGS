@@ -14,7 +14,7 @@ body {
   table {
     font-size: 12px;
   }
-  .hotel-search {
+  .dog-search {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -42,7 +42,7 @@ body {
     margin-top: 20px;
     border: solid 2px;
   }
-  #findhotels {
+  #findDogs {
     font-size: 14px;
   }
   #locationField {
