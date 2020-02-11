@@ -5,6 +5,7 @@ $(function(){
   
   //  DECLARATIONS 
   let recentPlaces = null;
+  let apiKey = "e289f98da0cc0e60eb332ebfc1bf33ee";
 
   //  REFERENCES
   let $search = $("#search");
@@ -47,6 +48,21 @@ $(function(){
     }
   }
 
+  //get current weather for location
+  function getWeather(location){
+    let safe = encodeURI(location);
+    let queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${safe}&appid=${apiKey}&units=imperial`
+    console.log(`location going to openweather: ${safe}`);
+    $.get(queryUrl).then(function(response){
+      //temp
+      $(".temp").text(Math.floor(response.main.temp));
+      //windspeed
+      $(".windspeed").text(response.wind.speed);
+      //icon
+      $(".wIcon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='icon of weather'>");
+    });
+  }
+
   //getting location from mapping js
   window.getAutoLocation = function(address){
     recentPlaces = JSON.parse(localStorage.getItem("recentPlaces"));
@@ -59,6 +75,7 @@ $(function(){
       recentPlaces.unshift(inputString);
     }
     localStorage.setItem("recentPlaces", JSON.stringify(recentPlaces));
+    getWeather(inputString);
     drawPlaces();
 
     // console.log (address);
