@@ -55,9 +55,9 @@ $(function(){
     console.log(`location going to openweather: ${safe}`);
     $.get(queryUrl).then(function(response){
       //temp
-      $(".temp").text(Math.floor(response.main.temp));
+      $(".temp").text(`Temp: ${Math.floor(response.main.temp)}`);
       //windspeed
-      $(".windspeed").text(response.wind.speed);
+      $(".windspeed").text(`Wind speed: ${response.wind.speed}`);
       //icon
       $(".wIcon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='icon of weather'>");
     });
