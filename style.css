@@ -103,8 +103,15 @@ body {
   }
   #weatherList {
     list-style: none;
+    margin: 0px;
   }
   ul#weatherList li {
     display: inline;
+  }
+  li.temp {
+    font-size: 20px;
+  }
+  li.windspeed {
+    font-size: 20px;
   }
   
