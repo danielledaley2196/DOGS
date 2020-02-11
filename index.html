@@ -7,31 +7,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet"type="text/css" href="style.css">
-    <title>Dogs</title>
+    <title>Pet Friendly Places</title>
 
 </head>
 
 <body>
       <nav>
         <div class="nav-wrapper green darken-3">
-          <a href="#!" class="brand-logo center green darken-3">Pet Friendly Places</a>
+          <a href="#!" class="brand-logo center green darken-3">Dogs</a>
           <a href="#" data-target="theHamburger" class="sidenav-trigger">Popular Places</a>
         </div>
       </nav>
       
       <ul class="sidenav" id="theHamburger">
-        <li data-place="boston">Boston</li>
-        <li data-place="chicago">Chicago</li>
-        <li data-place="seattle">Seattle</li>
       </ul>
       <!--Put search bar here for mobile, when not mobile it is in the nav-->
       <div class="theBigPicture">
         <div class="row">
           <div class="col s2 hide-on-med-and-down" id="theSideBar">
             <ul id="popularPlaces">
-              <li data-place="boston">Boston</li>
-              <li data-place="chicago">Chicago</li>
-              <li data-place="seattle">Seattle</li>
             </ul>
           </div>
           <div class="col s10" id="theMap">
@@ -44,6 +38,14 @@
                     </div>
                     <div id="locationField">
                       <input id="autocomplete" placeholder="Enter a city" type="text" />
+                    </div>
+                    <div id="isWeather">
+                      <!--temp,icon, windspeed-->
+                      <ul id="weatherList">
+                        <li class="temp"></li>
+                        <li class="windspeed"></li>
+                        <li class="wIcon"></li>
+                      </ul>
                     </div>
                 <div id="controls">
                   <select id="country">

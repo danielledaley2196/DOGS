@@ -101,3 +101,10 @@ body {
   .isHidden {
     display:none;
   }
+  #weatherList {
+    list-style: none;
+  }
+  ul#weatherList li {
+    display: inline;
+  }
+  
