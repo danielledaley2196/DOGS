@@ -50,15 +50,18 @@ $(function(){
 
   //get current weather for location
   function getWeather(location){
-    let safe = encodeURI(location);
-    let queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${safe}&appid=${apiKey}&units=imperial`
-    console.log(`location going to openweather: ${safe}`);
+    //let safe = encodeURI(location);
+    let afterState = false;
+    location = location.split(", ")
+                        .join()
+                        .slice(0,-1);
+    let queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=imperial`
     $.get(queryUrl).then(function(response){
-      //temp
-      $(".temp").text(Math.floor(response.main.temp));
-      //windspeed
-      $(".windspeed").text(response.wind.speed);
-      //icon
+      console.log(response);
+      $(".temp").html(`Temp: ${Math.floor(response.main.temp)}&deg;F`);
+      
+      $(".windspeed").text(`Wind speed: ${response.wind.speed}m.p.h.`);
+      
       $(".wIcon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='icon of weather'>");
     });
   }
@@ -77,8 +80,9 @@ $(function(){
     localStorage.setItem("recentPlaces", JSON.stringify(recentPlaces));
     getWeather(inputString);
     drawPlaces();
+    let lat = address.geometry.location.lat
+    console.log(lat);
 
-    // console.log (address);
     // placeName = address;
   };
 
