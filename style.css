@@ -110,8 +110,10 @@ body {
   }
   li.temp {
     font-size: 20px;
+    margin-left: 20px;
   }
   li.windspeed {
     font-size: 20px;
+    margin-left: 20px;
   }
   
