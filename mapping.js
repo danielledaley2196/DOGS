@@ -3,7 +3,7 @@ var markers = [];
 var autocomplete;
 var countryRestrict = { country: "us" };
 var MARKER_PATH =
-  "https://developers.google.com/maps/documentation/javascript/images/marker_green";
+  "./images/dogicon_15.png";
 var hostnameRegexp = new RegExp("^https?://.+?/");
 
 var countries = {
@@ -76,8 +76,8 @@ function search() {
       // Create a marker for each pet friendly place found, and
       // assign a letter of the alphabetic to each marker icon.
       for (var i = 0; i < results.length; i++) {
-        var markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-        var markerIcon = MARKER_PATH + markerLetter + ".png";
+        // var markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+        var markerIcon = MARKER_PATH;
         // Use marker animation to drop the icons incrementally on the map.
         markers[i] = new google.maps.Marker({
           position: results[i].geometry.location,
@@ -129,8 +129,8 @@ function dropMarker(i) {
 // this function adds each result and puts a letter on a marker
 function addResult(result, i) {
   var results = document.getElementById("results");
-  var markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-  var markerIcon = MARKER_PATH + markerLetter + ".png";
+  // var markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+  var listIcon = "./images/doglist.jpg";
 
   var tr = document.createElement("tr");
   tr.style.backgroundColor = i % 2 === 0 ? "#F0F0F0" : "#FFFFFF";
@@ -141,7 +141,7 @@ function addResult(result, i) {
   var iconTd = document.createElement("td");
   var nameTd = document.createElement("td");
   var icon = document.createElement("img");
-  icon.src = markerIcon;
+  icon.src = listIcon;
   icon.setAttribute("class", "placeIcon");
   icon.setAttribute("className", "placeIcon");
   var name = document.createTextNode(result.name);
