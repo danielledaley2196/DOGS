@@ -55,6 +55,7 @@ $(function(){
     location = location.split(", ")
                         .join()
                         .slice(0,-1);
+                        
     let queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=imperial`
     $.get(queryUrl).then(function(response){
       console.log(response);
@@ -80,10 +81,6 @@ $(function(){
     localStorage.setItem("recentPlaces", JSON.stringify(recentPlaces));
     getWeather(inputString);
     drawPlaces();
-    let lat = address.geometry.location.lat
-    console.log(lat);
-
-    // placeName = address;
   };
 
   //  EVENT LISTENERS
@@ -109,7 +106,8 @@ $(function(){
   });
 
   //when dog div is clicked, change the random dog
-  $(document).on("click", $theDog, function(){    
+  $(document).on("click", ".theDog", function(){ 
+    console.log(this);   
     $.get("https://api.thedogapi.com/v1/images/search").then(function(response){
     $theDog.empty();
     $theDog.append($("<img>")
@@ -118,8 +116,7 @@ $(function(){
                     class: "responsive-img"
                   }));
     })
-  });
-  
+  }); 
   
   drawPlaces();
 
