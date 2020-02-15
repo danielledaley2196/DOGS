@@ -1,7 +1,9 @@
-
-  body {
-    padding: 0 !important;
-  }
+html,body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
   table {
     font-size: 12px;
   }
@@ -17,6 +19,7 @@
     top: 0;
     width: 440px;
     z-index: 1;
+    margin: 0px;
   }
   #map {
     margin-top: 40px;
@@ -107,7 +110,15 @@
     font-size: 20px;
     margin-left: 20px;
   }
-  div.nav-wrapper {
-    width: 100vh;
+  .container {
+    margin: 0;
   }
-  
+  .theBigPicture {
+    margin: 0px;
+  }
+#autocomplete {
+  width: 200px;
+}
+td.placeIcon {
+  width: 40px;
+}
