@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet"type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="./images/dog.ico" type="image/x-icon" />
     <title>Pet Friendly Places</title>
+  </head>
 
-</head>
+  <body>
+    <nav class="green darken-3">
+      <div class="nav-wrapper green darken-3">
+        <a href="#!" class="brand-logo center green darken-3">Dogs</a>
+        <a href="#" data-target="theHamburger" class="sidenav-trigger"
+          >Popular Places</a
+        >
+      </div>
+    </nav>
 
-<body>
-      <nav>
-        <div class="nav-wrapper green darken-3">
-          <a href="#!" class="brand-logo center green darken-3">Dogs</a>
-          <a href="#" data-target="theHamburger" class="sidenav-trigger">Popular Places</a>
+    <ul class="sidenav" id="theHamburger"></ul>
+    <!--Put search bar here for mobile, when not mobile it is in the nav-->
+    <div class="theBigPicture">
+      <div class="row">
+        <div class="col l2 hide-on-med-and-down" id="theSideBar">
+          <ul id="popularPlaces"></ul>
         </div>
-      </nav>
-      
-      <ul class="sidenav" id="theHamburger">
-      </ul>
-      <!--Put search bar here for mobile, when not mobile it is in the nav-->
-      <div class="theBigPicture">
-        <div class="row">
-          <div class="col s2 hide-on-med-and-down" id="theSideBar">
-            <ul id="popularPlaces">
+        <div class="col s12 m12 l10" id="theMap">
+          <div class="theDog">
+            <img id="dog" class="responsive-img" src="" />
+          </div>
+          <div class="dog-search">
+            <div id="findDogs">
+              Find Pet Friendly Places:
+            </div>
+            <div id="locationField">
+              <input id="autocomplete" placeholder="Enter a city" type="text" />
+            </div>
+            <div id="controls">
+              <select id="country">
+                <option value="us" selected>U.S.A.</option>
+              </select>
+            </div>
+          </div>
+          <div id="isWeather">
+            <!--temp,icon, windspeed-->
+            <ul id="weatherList">
+              <li class="wIcon"></li>
+              <li class="temp"></li>
+              <li class="windspeed"></li>
             </ul>
           </div>
-          <div class="col s10" id="theMap">
-            <div class="theDog">
-              <img id="dog" class="responsive-img" src="">
+            <div id="map" class="mapSize isHidden"></div>
+          <div id="listing isHidden">
+            <table id="resultsTable">
+              <tbody id="results"></tbody>
+            </table>
+          </div>
+
+          <div style="display: none">
+            <div id="info-content">
+              <table>
+                <tr id="iw-url-row" class="iw_table_row">
+                  <td id="iw-icon" class="iw_table_icon"></td>
+                  <td id="iw-url"></td>
+                </tr>
+                <tr id="iw-address-row" class="iw_table_row">
+                  <td class="iw_attribute_name">Address:</td>
+                  <td id="iw-address"></td>
+                </tr>
+                <tr id="iw-phone-row" class="iw_table_row">
+                  <td class="iw_attribute_name">Telephone:</td>
+                  <td id="iw-phone"></td>
+                </tr>
+                <tr id="iw-rating-row" class="iw_table_row">
+                  <td class="iw_attribute_name">Rating:</td>
+                  <td id="iw-rating"></td>
+                </tr>
+                <tr id="iw-website-row" class="iw_table_row">
+                  <td class="iw_attribute_name">Website:</td>
+                  <td id="iw-website"></td>
+                </tr>
+              </table>
             </div>
-                  <div class="dog-search">
-                    <div id="findDogs">
-                      Find Pet Friendly Places: 
-                    </div>
-                    <div id="locationField">
-                      <input id="autocomplete" placeholder="Enter a city" type="text" />
-                    </div>
-                    <div id="controls">
-                      <select id="country">
-                        <option value="us" selected>U.S.A.</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div id="isWeather">
-                    <!--temp,icon, windspeed-->
-                    <ul id="weatherList">
-                      <li class="wIcon"></li>
-                      <li class="temp"></li>
-                      <li class="windspeed"></li>
-                    </ul>
-                  </div>
-                  
-              <div id="map" class="mapSize isHidden"></div>
-                <div id="listing isHidden">
-                  <table id="resultsTable">
-                    <tbody id="results"></tbody>
-                  </table>
-                </div>
-                
-              <div style="display: none">
-                <div id="info-content">
-                  <table>
-                    <tr id="iw-url-row" class="iw_table_row">
-                      <td id="iw-icon" class="iw_table_icon"></td>
-                      <td id="iw-url"></td>
-                    </tr>
-                    <tr id="iw-address-row" class="iw_table_row">
-                      <td class="iw_attribute_name">Address:</td>
-                      <td id="iw-address"></td>
-                    </tr>
-                    <tr id="iw-phone-row" class="iw_table_row">
-                      <td class="iw_attribute_name">Telephone:</td>
-                      <td id="iw-phone"></td>
-                    </tr>
-                    <tr id="iw-rating-row" class="iw_table_row">
-                      <td class="iw_attribute_name">Rating:</td>
-                      <td id="iw-rating"></td>
-                    </tr>
-                    <tr id="iw-website-row" class="iw_table_row">
-                      <td class="iw_attribute_name">Website:</td>
-                      <td id="iw-website"></td>
-                    </tr>
-                  </table>
-                </div>
-              </div>          
-            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -97,6 +102,10 @@
     <script src="mapping.js"></script>
     <script src="randomDogScript.js"></script>
     <script src="logic.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFu4KoXjRj-nsrXfPRQlpmjvTOLhw4hyA&callback=initMap&libraries=places&callback=initMap" async defer></script>
-</body>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFu4KoXjRj-nsrXfPRQlpmjvTOLhw4hyA&callback=initMap&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
 </html>
