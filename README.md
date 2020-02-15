@@ -32,8 +32,9 @@ Are you planning a trip and can't remember where that dog friendly place was, ne
 ## Screenshot
 ![With Dog Image](/images/Dog_desktop.png)
 </br>
-![With Map]()
+![With Map](/images/map_desktop.png)
+![With List] (/images/list_desktop.png)
 </br>
 ![Mobile Dog Image](images/Dog_mobile.png)
 </br>
-![Mobile With Map]()
+![Mobile With Map](/images/map_mobile.png)
