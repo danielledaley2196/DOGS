@@ -61,7 +61,7 @@ $(function(){
       console.log(response);
       $(".temp").html(`Temp: ${Math.floor(response.main.temp)}&deg;F`);
       
-      $(".windspeed").text(`Wind speed: ${response.wind.speed}m.p.h.`);
+      $(".windspeed").text(`Wind speed: ${response.wind.speed} m.p.h.`);
       
       $(".wIcon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='icon of weather'>");
     });
